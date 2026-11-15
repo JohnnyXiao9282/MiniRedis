@@ -31,8 +31,4 @@ public:
     bool empty() const;
 
 
-    
-    
-public: 
-
 };
