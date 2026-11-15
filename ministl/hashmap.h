@@ -31,3 +31,5 @@ public:
     std::size_t size() const;
     bool empty() const;
 };
+
+#include "hashmap.tpp"
