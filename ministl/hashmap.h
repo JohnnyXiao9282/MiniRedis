@@ -1,6 +1,7 @@
 #pragma once 
 #include <cstddef>
 #include <functional>
+#include "vector.h"
 #include "utils/list_node.h"
 
 template <typename K, typename V>
@@ -19,7 +20,7 @@ private:
 public:
     hashmap();
     hashmap(const hashmap& other);
-    hash& operator=(const hashmap& other);
+    hashmap& operator=(const hashmap& other);
     ~hashmap();
 
     void put(const K& key, const V& value);
@@ -29,6 +30,4 @@ public:
     
     std::size_t size() const;
     bool empty() const;
-
-
 };
