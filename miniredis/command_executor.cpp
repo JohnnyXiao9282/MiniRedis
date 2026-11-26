@@ -29,7 +29,7 @@ std::string CommandExecutor::execute(const std::vector<std::string>& tokens) {
     if (command == "exists" && size == 2) {
         std::string value;
         if (store.get(tokens[1], value)) {
-            return tokens[1] + ": " + value;
+            return tokens[1] + " : " + value;
         } else {
             return "";
         }
