@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <vector>
+#include "../ministl/vector.h"
 
 #include "key_value_store.cpp"
 #include "command_parser.cpp"
@@ -14,7 +14,7 @@ int main() {
     std::string line;
     std::cout << "> " << std::flush;
     while (std::getline(std::cin, line)) {
-        std::vector<std::string> tokens = parser.tokenize(line);
+        vector<std::string> tokens = parser.tokenize(line);
         if (!tokens.empty()) {
             std::string result = executor.execute(tokens);
             if (!result.empty()) {

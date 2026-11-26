@@ -2,11 +2,11 @@
 #define COMMAND_PARSER_H
 
 #include <string>
-#include <vector>
+#include "../ministl/vector.h"
 
 class CommandParser {
 public:
-    std::vector<std::string> tokenize(const std::string& line) const;
+    vector<std::string> tokenize(const std::string& line) const;
 };
 
 #endif

@@ -3,7 +3,7 @@
 CommandExecutor::CommandExecutor(KeyValueStore& store) : store(store) {
 }
 
-std::string CommandExecutor::execute(const std::vector<std::string>& tokens) {
+std::string CommandExecutor::execute(const vector<std::string>& tokens) {
     const std::string& command = tokens[0];
     std::size_t size = tokens.size();
 
