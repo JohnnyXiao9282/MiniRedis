@@ -51,7 +51,3 @@ name : bob
 > get name
 
 ```
-
-## Status
-
-Work in progress. Planned next steps: wrong-argument-count errors, TTL on keys, and saving to disk.
