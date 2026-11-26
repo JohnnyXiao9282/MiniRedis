@@ -1,4 +1,5 @@
 #include "command_executor.h"
+#include <cstdlib>
 
 CommandExecutor::CommandExecutor(KeyValueStore& store) : store(store) {
 }
@@ -6,6 +7,10 @@ CommandExecutor::CommandExecutor(KeyValueStore& store) : store(store) {
 std::string CommandExecutor::execute(const vector<std::string>& tokens) {
     const std::string& command = tokens[0];
     std::size_t size = tokens.size();
+
+    if (command == "exit" && size == 1) {
+        std::exit(0);
+    }
 
     if (command == "set" && size == 3) {
         store.set(tokens[1], tokens[2]);
